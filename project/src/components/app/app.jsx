@@ -1,15 +1,18 @@
 import React from 'react';
+import Header from '../header/header';
+import Main from '../main/main';
+import Footer from '../footer/footer';
 import './app.scss';
-import '../../sass/fonts.scss';
 
 function App() {
   return (
-    <header className="page-header">
+    <>
+      <Header />
 
-      <div className="copyright">
-        <p>© 2019 What to watch Ltd.</p>
-      </div>
-    </header>
+      <Main />
+
+      <Footer />
+    </>
   );
 }
 

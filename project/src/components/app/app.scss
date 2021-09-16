@@ -1,16 +1,4 @@
-.page-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.page-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-weight: 700;
-  color: white;
-}
+@import '../../sass/fonts.scss';
+@import '../../sass/global.scss';
+@import '../header/header.scss';
+@import '../footer/footer.scss';

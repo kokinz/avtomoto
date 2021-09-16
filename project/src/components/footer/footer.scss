@@ -1,0 +1,38 @@
+.footer {
+  min-height: 82px;
+  width: 100%;
+
+  background-color: #F5F5F9;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #F5F5F9;
+}
+
+.footer__nav {
+  min-height: 82px;
+  width: 100%;
+  padding-left: 7px;
+
+  letter-spacing: 0.3px;
+}
+
+.footer__list {
+  justify-content: flex-start;
+  margin-right: 0;
+}
+
+.footer__item{
+  margin-right: 67px;
+
+  &:nth-last-child(2) {
+    margin-right: 60px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
