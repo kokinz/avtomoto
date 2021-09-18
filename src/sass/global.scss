@@ -50,3 +50,32 @@
   padding: 0;
   list-style: none;
 }
+
+.button {
+  box-sizing: border-box;
+
+  min-height: 52px;
+  min-width: 195px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  background: #D12136;
+
+  cursor: pointer;
+  border: none;
+
+  &--white {
+    color: #D12136;
+    background: #FFFFFF;
+
+    border: 1px solid #D12136;
+  }
+}
