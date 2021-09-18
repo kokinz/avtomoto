@@ -1,6 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {IMAGES} from '../../const.js';
 
 function Promo() {
+  const [activeImage, setActiveImage] = useState(0);
+
+  const handlePrevButtonClick = (evt) => {
+    evt.preventDefault();
+
+    if (activeImage === 0) {
+      return;
+    }
+
+    setActiveImage(activeImage - 1);
+  }
+
+  const handleNextButtonClick = (evt) => {
+    evt.preventDefault();
+
+    if (activeImage === IMAGES.length - 1) {
+      return;
+    }
+
+    setActiveImage(activeImage + 1);
+  }
+
   return(
     <section className="promo container">
       <div className="promo__info-wrapper">
@@ -52,33 +75,28 @@ function Promo() {
       </div>
 
       <div className="promo__images-wrapper">
-        <img className="promo__image" src="../img/car-photo.png" width="600" height="375" alt="Фото автомобиля" />
+        <img className="promo__image" src={`../img/${IMAGES[activeImage].url}`} width="600" height="375" alt={`../img/${IMAGES[activeImage].info}`} />
 
         <p className="promo__label">
           New model
         </p>
 
         <div className="promo__pagination-wrapper">
-          <button className="promo__pagination-button promo__pagination-button--prev button">
+          <button className="promo__pagination-button promo__pagination-button--prev button" onClick={handlePrevButtonClick} disabled={activeImage === 0}>
             <svg className="promo__pagination-arrow promo__pagination-arrow--prev" viewBox="0 0 20 13" width={20} height={13}>
               <use xlinkHref="#pagination-arrow" />
             </svg>
           </button>
 
           <ul className="promo__pagination-list list">
-            <li>
-              <img className="promo__pagination-image" src="../img/car-photo.png" width="128" height="80" alt="Превью фото автомобиля" />
-            </li>
-            <li>
-              <img src="../img/vehicle-interior.png" width="128" height="80" alt="Превью фото салона автомобиля" />
-            </li>
-            <li>
-              <img src="../img/dashboard.png" width="128" height="80" alt="Превью фото панели автомобиля" />
-            </li>
-
+            {IMAGES.map((image) => (
+              <li key={image.url}>
+                <img className="promo__pagination-image" src={`../img/${image.url}`} width="128" height="80" alt={image.info} />
+              </li>
+            ))}
           </ul>
 
-          <button className="promo__pagination-button promo__pagination-button--next button">
+          <button className="promo__pagination-button promo__pagination-button--next button" onClick={handleNextButtonClick} disabled={activeImage === IMAGES.length - 1}>
             <svg className="promo__pagination-arrow promo__pagination-arrow--next" viewBox="0 0 20 13" width={20} height={13}>
               <use xlinkHref="#pagination-arrow" />
             </svg>
