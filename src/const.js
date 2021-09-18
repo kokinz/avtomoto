@@ -13,4 +13,10 @@ const IMAGES = [
   }
 ];
 
-export {IMAGES};
+const Tab = {
+  SPECIFICATIONS: 'Характеристики',
+  REVIEWS: 'Отзывы',
+  Contacts: 'Контакты',
+};
+
+export {IMAGES, Tab};

@@ -1,0 +1,33 @@
+.tabs {
+  margin-top: 85px;
+  padding-left: 76px;
+}
+
+.tabs__list {
+  display: flex;
+
+  margin-bottom: 30px;
+}
+
+.tabs__link {
+  display: block;
+  box-sizing: border-box;
+
+  min-width: 195px;
+  min-height: 50px;
+  padding-top: 10px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+
+  border: 1px solid #D7D9DF;
+
+  &--active {
+    color: #FFFFFF;
+    background-color: #D12136;
+
+    border: none;
+  }
+}
