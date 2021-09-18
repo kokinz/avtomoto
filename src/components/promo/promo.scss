@@ -178,6 +178,10 @@
   &--next {
     margin-left: 31px;
   }
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .promo__pagination-list {

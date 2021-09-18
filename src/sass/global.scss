@@ -85,19 +85,22 @@
 
   &--white {
     color: #D12136;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
 
     border: 1px solid #D12136;
   }
 
-  &:disabled {
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
     opacity: 0.5;
 
     cursor: default;
   }
 
   &:hover {
-    opacity: 0.4;
+    color: #FFFFFF;
+    background-color: #BD0C21;
   }
 
   &:active {
