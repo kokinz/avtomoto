@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import SpecificationTab from './tabs/specification-tab/specification-tab';
+import ContactsTab from './tabs/contacts-tab/contacts-tab';
 // import DetailsTab from './details-tab';
 // import ReviewsTab from './reviews-tab';
 
@@ -26,8 +27,7 @@ function Tabs() {
         ))}
       </ul>
       {activeTab === Tab.SPECIFICATIONS && <SpecificationTab />}
-      {/* {activeTab === Tab.SPECIFICATIONS && <DetailsTab film={film} />}
-      {activeTab === Tab.SPECIFICATIONS && <ReviewsTab reviews={reviews} />} */}
+      {activeTab === Tab.CONTACTS && <ContactsTab />}
     </section>
   );
 

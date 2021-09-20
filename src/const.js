@@ -16,7 +16,7 @@ const IMAGES = [
 const Tab = {
   SPECIFICATIONS: 'Характеристики',
   REVIEWS: 'Отзывы',
-  Contacts: 'Контакты',
+  CONTACTS: 'Контакты',
 };
 
 export {IMAGES, Tab};
