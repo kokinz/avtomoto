@@ -1,0 +1,148 @@
+.reviews {
+  position: relative;
+}
+
+.reviews__item {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.reviews__author {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #48494D;
+}
+
+.advantages__header,
+.disadvantages__header,
+.reviews__text-header {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+
+  margin-top: 13px;
+  margin-left: 0;
+
+  color: #000000;
+}
+
+.advantages__header-icon,
+.disadvantages__header-icon {
+  display: inline-block;
+  width: 10px;
+  margin-right: 5px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: #D12136;
+}
+
+.advantages__list,
+.disadvantages__list {
+  margin-left: 18px;
+  margin-top: 5px;
+}
+
+.reviews__text-header {
+  margin-left: 0;
+}
+
+.reviews__text {
+  margin-top: 4px;
+}
+
+.reviews__rating {
+  display: flex;
+}
+
+.reviews__rating-stars {
+  display: flex;
+  justify-content: space-between;
+
+  width: 103px;
+  min-height: 17px;
+  margin-top: 6px;
+  margin-left: -1px;
+}
+
+.reviews__rating-star {
+  fill: #BDBEC2;
+  opacity: 0.7;
+}
+
+.reviews__rating-star.checked {
+  fill: #D12136;
+}
+
+.reviews__rating-advise {
+  margin-left: 21px;
+  margin-top: 6px;
+
+  color: #D12136;
+}
+
+.reviews__time {
+  display: inline-block;
+  margin-top: 27px;
+  margin-left: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #000000;
+
+  opacity: 0.4;
+}
+
+.reviews__answer-button {
+  margin-left: 26px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #D12136;
+}
+
+.reviews__list-item:last-child .reviews__item {
+  margin-bottom: 0;
+}
+
+.reviews__list-item:last-child .reviews__disadvantages {
+  margin-top: 7px;
+  margin-bottom: 27px;
+}
+
+.reviews__list-item:last-child .disadvantages__header {
+  margin: 0;
+}
+
+.reviews__button {
+  position: absolute;
+  box-sizing: border-box;
+
+  min-width: 189px;
+  padding: 0;
+  top: 0;
+  right: 6px;
+
+  color: #D12136;
+
+  border: 1px solid #D12136;
+  background-color: transparent;
+}
