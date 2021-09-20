@@ -8,6 +8,7 @@ function Main() {
       <h1 className="visually-hidden">AVTO MOTO</h1>
 
       <Promo />
+
       <Tabs />
     </main>
   );

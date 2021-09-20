@@ -1,6 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
+import Popup from "../../../popup/popup";
 
 function ReviewsTab() {
+  const [shownPopup, setShownPopup] = useState(false);
+
+  const handlePopupClose = (evt) => {
+    if (evt.key === ('Escape' || 'Esc')) {
+      evt.preventDefault();
+
+      setShownPopup(false);
+
+      document.body.style.position = '';
+      document.body.style.top = '';
+    }
+  }
+
+  const handlePopupOpen = (evt) => {
+    evt.preventDefault();
+    const scrollHeight = window.pageYOffset;
+
+    setShownPopup(true);
+
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollHeight}px`;
+
+    window.addEventListener('keydown', handlePopupClose);
+  }
+
   return (
     <section className="reviews">
       <ul className="reviews__list list">
@@ -170,9 +196,11 @@ function ReviewsTab() {
         </li>
       </ul>
 
-      <button className="reviews__button button">
+      <button className="reviews__button button" onClick={handlePopupOpen}>
         Оставить отзыв
       </button>
+
+      {shownPopup ? <Popup /> : ''}
     </section>
   );
 }
