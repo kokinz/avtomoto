@@ -36,6 +36,10 @@
   margin: 0 auto;
   padding: 0 72px;
   width: 1321px;
+
+  @media (max-width: 1321px) {
+    width: 100%;
+  }
 }
 
 .link {
