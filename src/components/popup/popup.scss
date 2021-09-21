@@ -115,7 +115,8 @@
 
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:hover ~ .popup__star-label {
     fill: #D12136;
   }
 

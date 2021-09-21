@@ -1,11 +1,77 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 
 function Popup({onPopupClose}) {
   const layout = useRef();
+  const nameInput = useRef();
+  const advantagesInput = useRef();
+  const disadvantagesInput = useRef();
+  const textarea = useRef();
+
+  const [data, setData] = useState({
+    name: '',
+    advantages: '',
+    disadvantages: '',
+    rating: 0,
+    text: '',
+  });
+
+  const [errors, setErrors] = useState({
+    name: false,
+    text: false,
+  });
+
+  useEffect(() => {
+    nameInput.current.focus();
+  }, []);
 
   const handleLayoutClick = (evt) => {
     if (evt.target === layout.current) {
       onPopupClose();
+    }
+  }
+
+  const handleFormChange = (evt) => {
+    if (evt.target.name === 'star') {
+      setData({
+        ...data,
+        rating: Number(evt.target.value),
+      });
+    } else {
+      setData({
+        ...data,
+        name: nameInput.current.value,
+        advantages: advantagesInput.current.value,
+        disadvantages: disadvantagesInput.current.value,
+        text: textarea.current.value,
+      })
+    }
+    console.log('form');
+    console.log(data)
+  }
+
+  const handleFormSubmit = (evt) => {
+    evt.preventDefault();
+
+    if (data.name === '') {
+      setErrors({
+        ...errors,
+        name: true,
+      })
+
+      nameInput.current.focus();
+
+      return;
+    }
+
+    if (data.text === '') {
+      setErrors({
+        ...errors,
+        text: true,
+      })
+
+      textarea.current.focus();
+
+      return;
     }
   }
 
@@ -14,15 +80,15 @@ function Popup({onPopupClose}) {
       <section className="popup">
         <h2 className="popup__header">Оставить отзыв</h2>
 
-        <form className="popup__form" action="">
+        <form className="popup__form" action="" onChange={handleFormChange} onSubmit={handleFormSubmit}>
           <div className="popup__form-wrapper">
             <div className="popup__required">
-              <input className="popup__text popup__required" type="text" placeholder="Имя" required />
+              <input className="popup__text" ref={nameInput} type="text" placeholder="Имя" />
             </div>
 
-            <input className="popup__text" type="text" placeholder="Достоинства" />
+            <input className="popup__text" ref={advantagesInput} type="text" placeholder="Достоинства" />
 
-            <input className="popup__text" type="text" placeholder="Недостатки" />
+            <input className="popup__text" ref={disadvantagesInput} type="text" placeholder="Недостатки" />
           </div>
 
           <div className="popup__form-wrapper">
@@ -68,7 +134,7 @@ function Popup({onPopupClose}) {
             </div>
 
             <div className="popup__required">
-              <textarea className="popup__textarea popup__required" name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий" required></textarea>
+              <textarea className="popup__textarea" ref={textarea} name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий"></textarea>
             </div>
           </div>
 
