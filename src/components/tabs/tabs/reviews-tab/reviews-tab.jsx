@@ -15,20 +15,19 @@ function ReviewsTab() {
   const handlePopupClose = () => {
     setShownPopup(false);
 
-    document.body.style.position = '';
-    document.body.style.top = '';
+    document.body.style.height = '100%';
+    document.body.style.overflow = 'unset';
 
     window.removeEventListener('keydown', handleEscKeydown);
   }
 
   const handlePopupOpen = (evt) => {
     evt.preventDefault();
-    const scrollHeight = window.pageYOffset;
 
     setShownPopup(true);
 
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollHeight}px`;
+    document.body.style.height = '100vh';
+    document.body.style.overflow = 'hidden';
 
     window.addEventListener('keydown', handleEscKeydown);
   }
@@ -212,3 +211,4 @@ function ReviewsTab() {
 }
 
 export default ReviewsTab;
+
