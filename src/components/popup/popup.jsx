@@ -16,7 +16,9 @@ function Popup({onPopupClose}) {
 
         <form className="popup__form" action="">
           <div className="popup__form-wrapper">
-            <input className="popup__text" type="text" placeholder="Имя" required />
+            <div className="popup__required">
+              <input className="popup__text popup__required" type="text" placeholder="Имя" required />
+            </div>
 
             <input className="popup__text" type="text" placeholder="Достоинства" />
 
@@ -65,7 +67,9 @@ function Popup({onPopupClose}) {
               </div>
             </div>
 
-            <textarea className="popup__textarea" name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий" required></textarea>
+            <div className="popup__required">
+              <textarea className="popup__textarea popup__required" name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий" required></textarea>
+            </div>
           </div>
 
           <button className="popup__submit button" type="submit">Оставить отзыв</button>
