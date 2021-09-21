@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 
-function Popup({onPopupClose}) {
+function Popup({onPopupClose, onReviewAdd}) {
   const layout = useRef();
   const nameInput = useRef();
   const advantagesInput = useRef();
@@ -78,6 +78,9 @@ function Popup({onPopupClose}) {
 
       return;
     }
+
+    onReviewAdd(tempData);
+
     onPopupClose();
 
     reviewsData.push(tempData);
