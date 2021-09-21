@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useRef} from 'react';
 
-function Popup() {
+function Popup({onPopupClose}) {
+  const layout = useRef();
+
+  const handleLayoutClick = (evt) => {
+    if (evt.target === layout.current) {
+      onPopupClose();
+    }
+  }
+
   return(
-    <div className="popup-wrapper">
+    <div className="popup-wrapper" ref={layout} onClick={handleLayoutClick}>
       <section className="popup">
         <h2 className="popup__header">Оставить отзыв</h2>
 
@@ -63,7 +71,7 @@ function Popup() {
           <button className="popup__submit button" type="submit">Оставить отзыв</button>
         </form>
 
-        <button className="popup__close button" ></button>
+        <button className="popup__close button" onClick={onPopupClose}></button>
 
       </section>
     </div>

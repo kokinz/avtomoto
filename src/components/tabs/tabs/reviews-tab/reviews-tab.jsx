@@ -4,15 +4,21 @@ import Popup from "../../../popup/popup";
 function ReviewsTab() {
   const [shownPopup, setShownPopup] = useState(false);
 
-  const handlePopupClose = (evt) => {
+  const handleEscKeydown = (evt) => {
     if (evt.key === ('Escape' || 'Esc')) {
       evt.preventDefault();
 
-      setShownPopup(false);
-
-      document.body.style.position = '';
-      document.body.style.top = '';
+      handlePopupClose();
     }
+  }
+
+  const handlePopupClose = () => {
+    setShownPopup(false);
+
+    document.body.style.position = '';
+    document.body.style.top = '';
+
+    window.removeEventListener('keydown', handleEscKeydown);
   }
 
   const handlePopupOpen = (evt) => {
@@ -24,7 +30,7 @@ function ReviewsTab() {
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollHeight}px`;
 
-    window.addEventListener('keydown', handlePopupClose);
+    window.addEventListener('keydown', handleEscKeydown);
   }
 
   return (
@@ -200,7 +206,7 @@ function ReviewsTab() {
         Оставить отзыв
       </button>
 
-      {shownPopup ? <Popup /> : ''}
+      {shownPopup ? <Popup onPopupClose={handlePopupClose} /> : ''}
     </section>
   );
 }
