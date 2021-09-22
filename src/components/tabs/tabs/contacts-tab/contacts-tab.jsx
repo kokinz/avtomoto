@@ -9,7 +9,7 @@ function ContactsTab() {
             Адрес
           </p>
           <p className="contacts__info">
-            Санкт-Петербург, <nobr>набережная реки Карповки, дом 5</nobr>
+            Санкт-Петербург, <br />набережная реки Карповки, дом 5
           </p>
         </li>
         <li className="contacts__item">
@@ -17,7 +17,7 @@ function ContactsTab() {
             Режим работы
           </p>
           <p className="contacts__info">
-            <nobr>Ежедневно, с 10:00 до 21:00</nobr>
+            Ежедневно, с 10:00 до 21:00
           </p>
         </li>
         <li className="contacts__item">
@@ -38,9 +38,8 @@ function ContactsTab() {
         </li>
       </ul>
       <div className="contacts__map">
-      <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8300125432079!2d30.31430331604047!3d59.968143166680335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcwMjI!5e0!3m2!1sru!2sru!4v1632159401226!5m2!1sru!2sru" width="431" height="271" style={({border:0})} allowFullScreen="" loading="lazy">
-        <img src="../img/map.png" alt="Карта" width="431" height="271" />
-      </iframe>
+        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8300125432079!2d30.31430331604047!3d59.968143166680335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcwMjI!5e0!3m2!1sru!2sru!4v1632159401226!5m2!1sru!2sru" width="431" height="271" style={({border:0})} allowFullScreen="" loading="lazy">
+        </iframe>
       </div>
     </section>
   );

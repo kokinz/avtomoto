@@ -94,7 +94,7 @@ function Popup({onPopupClose, onReviewAdd}) {
       <section className="popup">
         <h2 className="popup__header">Оставить отзыв</h2>
 
-        <form className="popup__form" action="" onSubmit={handleFormSubmit}>
+        <form className="popup__form" action="/#" onSubmit={handleFormSubmit}>
           <div className="popup__form-wrapper">
             <div className={`popup__required ${errors.name ? 'popup__required--error' : ''}`}>
               <input className="popup__text" ref={nameInput} type="text" placeholder="Имя" value={data.name} onChange={handleFormChange} />
