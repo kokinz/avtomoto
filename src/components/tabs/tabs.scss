@@ -1,12 +1,27 @@
 .tabs {
   margin-top: 85px;
   padding-left: 76px;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
 }
 
 .tabs__list {
   display: flex;
 
   margin-bottom: 30px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tabs__item {
+  @media (max-width: 767px) {
+    margin: 10px 0;
+  }
 }
 
 .tabs__link {

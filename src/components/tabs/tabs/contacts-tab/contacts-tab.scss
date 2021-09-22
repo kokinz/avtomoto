@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 
   margin-top: -3px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .contacts__list {
@@ -34,4 +38,10 @@
 
 .contacts__map {
   margin-top: 3px;
+}
+
+.contacts__iframe {
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 }

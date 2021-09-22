@@ -22,6 +22,10 @@
   min-height: 415px;
 
   background-color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .popup__header {
@@ -45,6 +49,10 @@
   padding: 0 35px;
 
   margin-top: 20px;
+
+  @media (max-width: 670px) {
+    justify-content: center;
+  }
 }
 
 .popup__form-wrapper {
@@ -78,6 +86,10 @@
     line-height: 19px;
 
     color: rgba($color: #48494D, $alpha: 0.7);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
 
@@ -167,6 +179,10 @@
     border: 1px solid #FF0000;
     outline: none;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .popup__required {
@@ -212,6 +228,13 @@
 .popup__submit {
   min-width: 190px;
   margin: 18px auto 0;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: 50px;
+    margin: 50px;
+
+  }
 }
 
 .popup__close {

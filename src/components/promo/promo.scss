@@ -4,6 +4,14 @@
 
   margin-top: 70px;
   padding-left: 70px;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
 }
 
 .promo__info-wrapper {
@@ -58,6 +66,10 @@
   flex-wrap: wrap;
 
   margin-top: 37px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .prices__new {
@@ -122,11 +134,20 @@
 
   margin-right: 40px;
   padding-top: 20px;
+
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
 }
 
 .promo__image {
   width: 600px;
   height: 375px;
+
+  @media (max-width: 767px) {
+    width: 300px;
+    height: auto;
+  }
 }
 
 .promo__label {
@@ -155,6 +176,16 @@
   display: flex;
 
   margin-top: 39px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .promo__pagination-button {
@@ -190,6 +221,15 @@
   justify-content: space-between;
 
   min-width: 434px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+    margin: 20px 0;
+    min-width: 300px;
+  }
 }
 
 .promo__pagination-image {

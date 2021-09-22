@@ -1,5 +1,9 @@
 .specification {
   width: 565px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .specification__item {
