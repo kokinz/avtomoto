@@ -1,4 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 
 function Popup({onPopupClose, onReviewAdd}) {
   const layout = useRef();
@@ -94,7 +95,7 @@ function Popup({onPopupClose, onReviewAdd}) {
       <section className="popup">
         <h2 className="popup__header">Оставить отзыв</h2>
 
-        <form className="popup__form" action="/#" onSubmit={handleFormSubmit}>
+        <form className="popup__form" action="https://echo.htmlacademy.ru/" onSubmit={handleFormSubmit}>
           <div className="popup__form-wrapper">
             <div className={`popup__required ${errors.name ? 'popup__required--error' : ''}`}>
               <input className="popup__text" ref={nameInput} type="text" placeholder="Имя" value={data.name} onChange={handleFormChange} />
@@ -161,5 +162,10 @@ function Popup({onPopupClose, onReviewAdd}) {
     </div>
   );
 }
+
+Popup.propTypes = {
+  onPopupClose: PropTypes.func.isRequired,
+  onReviewAdd: PropTypes.func.isRequired,
+};
 
 export default Popup;

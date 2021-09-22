@@ -65,11 +65,11 @@ function Promo() {
           </li>
         </ul>
 
-        <button className="button prices__order-button">
+        <button className="button promo__order-button">
           Оставить заявку
         </button>
 
-        <button className="button prices__credit-button button--white">
+        <button className="button promo__credit-button button--white">
           В кредит от 11 000 ₽
         </button>
       </div>
@@ -82,7 +82,7 @@ function Promo() {
         </p>
 
         <div className="promo__pagination-wrapper">
-          <button className="promo__pagination-button promo__pagination-button--prev button" onClick={handlePrevButtonClick} disabled={activeImage === 0}>
+          <button className="promo__pagination-button promo__pagination-button--prev button" aria-label="previous photo" onClick={handlePrevButtonClick} disabled={activeImage === 0}>
             <svg className="promo__pagination-arrow promo__pagination-arrow--prev" viewBox="0 0 20 13" width={20} height={13}>
               <use xlinkHref="#pagination-arrow" />
             </svg>
@@ -96,7 +96,7 @@ function Promo() {
             ))}
           </ul>
 
-          <button className="promo__pagination-button promo__pagination-button--next button" onClick={handleNextButtonClick} disabled={activeImage === IMAGES.length - 1}>
+          <button className="promo__pagination-button promo__pagination-button--next button" aria-label="next photo" onClick={handleNextButtonClick} disabled={activeImage === IMAGES.length - 1}>
             <svg className="promo__pagination-arrow promo__pagination-arrow--next" viewBox="0 0 20 13" width={20} height={13}>
               <use xlinkHref="#pagination-arrow" />
             </svg>
