@@ -144,6 +144,8 @@
   width: 600px;
   height: 375px;
 
+  background-color: #3e6bca;
+
   @media (max-width: 767px) {
     width: 300px;
     height: auto;
@@ -235,4 +237,6 @@
 .promo__pagination-image {
   width: 128px;
   height: 80px;
+
+  background-color: #06132e;
 }

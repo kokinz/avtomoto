@@ -117,9 +117,9 @@ function ReviewsTab() {
               1 минуту назад
             </time>
 
-            <a href="/#" className="reviews__answer-button link">
+            <button className="reviews__answer-button button">
               Ответить
-            </a>
+            </button>
           </blockquote>
         </li>
         <li className="reviews__list-item">
@@ -199,9 +199,9 @@ function ReviewsTab() {
               1 минуту назад
             </time>
 
-            <a href="/#" className="reviews__answer-button link">
+            <button className="reviews__answer-button button">
               Ответить
-            </a>
+            </button>
           </blockquote>
         </li>
         {reviews.map((review) => (
@@ -271,9 +271,9 @@ function ReviewsTab() {
                 1 минуту назад
               </time>
 
-              <a href="/#" className="reviews__answer-button link">
+              <button className="reviews__answer-button button">
                 Ответить
-              </a>
+              </button>
             </blockquote>
           </li>
         ))}

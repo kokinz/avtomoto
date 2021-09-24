@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   font-weight: normal;
   font-size: 15px;
@@ -114,13 +114,20 @@
 }
 
 .reviews__answer-button {
-  margin-left: 26px;
+  margin-left: 20px;
+  margin-top: 25px;
+
+  min-width: 80px;
+  min-height: 22px;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  text-transform: none;
+  letter-spacing: 0;
 
   color: #D12136;
+  background-color: transparent;
 }
 
 .reviews__list-item:last-child .reviews__item {

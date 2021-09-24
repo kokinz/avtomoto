@@ -95,15 +95,18 @@ function Popup({onPopupClose, onReviewAdd}) {
       <section className="popup">
         <h2 className="popup__header">Оставить отзыв</h2>
 
-        <form className="popup__form" action="https://echo.htmlacademy.ru/" onSubmit={handleFormSubmit}>
+        <form className="popup__form" action="https://echo.htmlacademy.ru/" onSubmit={handleFormSubmit} id="form">
           <div className="popup__form-wrapper">
             <div className={`popup__required ${errors.name ? 'popup__required--error' : ''}`}>
-              <input className="popup__text" ref={nameInput} type="text" placeholder="Имя" value={data.name} onChange={handleFormChange} />
+              <label className="popup__label visually-hidden" htmlFor="name">Введите Имя</label>
+              <input className="popup__text" id="name" ref={nameInput} type="text" placeholder="Имя" value={data.name} onChange={handleFormChange} />
             </div>
 
-            <input className="popup__text" ref={advantagesInput} type="text" placeholder="Достоинства" value={data.advantages} onChange={handleFormChange} />
+            <label className="popup__label visually-hidden" htmlFor="advantages">Введите Достоинства</label>
+            <input className="popup__text" id="advantages" ref={advantagesInput} type="text" placeholder="Достоинства" value={data.advantages} onChange={handleFormChange} />
 
-            <input className="popup__text" ref={disadvantagesInput} type="text" placeholder="Недостатки" value={data.disadvantages} onChange={handleFormChange} />
+            <label className="popup__label visually-hidden" htmlFor="disadvantages">Введите Недостатки</label>
+            <input className="popup__text" id="disadvantages" ref={disadvantagesInput} type="text" placeholder="Недостатки" value={data.disadvantages} onChange={handleFormChange} />
           </div>
 
           <div className="popup__form-wrapper">
@@ -149,6 +152,7 @@ function Popup({onPopupClose, onReviewAdd}) {
             </div>
 
             <div className={`popup__required ${errors.text ? 'popup__required--error' : ''}`}>
+              <label className="popup__label visually-hidden" htmlFor="comment">Введите ваш комментарий</label>
               <textarea className="popup__textarea" ref={textarea} name="comment" id="comment" cols="30" rows="5" placeholder="Комментарий" value={data.text} onChange={handleFormChange}></textarea>
             </div>
           </div>
