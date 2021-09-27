@@ -7,7 +7,6 @@
 
 .header-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
   background-color: #F5F5F9;
@@ -24,7 +23,7 @@
 
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 
   min-width: 515px;
@@ -40,7 +39,13 @@
   }
 }
 
+.nav__item {
+  margin-bottom: 20px;
+}
+
 .nav__link {
+  margin-left: 68px;
+
   @media (max-width: 1321px) {
     margin: 0 30px;
   }

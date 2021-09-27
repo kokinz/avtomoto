@@ -8,25 +8,25 @@ function Footer() {
         <nav className="footer__nav nav">
           <ul className="footer__list nav__list list">
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Корпоративным клиентам</a>
+              <a className="nav__link footer__link link" href="/#">Корпоративным клиентам</a>
             </li>
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Клиентам</a>
+              <a className="nav__link footer__link link" href="/#">Клиентам</a>
             </li>
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Аренда авто</a>
+              <a className="nav__link footer__link link" href="/#">Аренда авто</a>
             </li>
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Каршеринг</a>
+              <a className="nav__link footer__link link" href="/#">Каршеринг</a>
             </li>
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Как продать авто</a>
+              <a className="nav__link footer__link link" href="/#">Как продать авто</a>
             </li>
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Trade-in</a>
+              <a className="nav__link footer__link link" href="/#">Trade-in</a>
             </li>
             <li className="nav__item footer__item">
-              <a className="nav__link link" href="/#">Test drive</a>
+              <a className="nav__link footer__link link" href="/#">Test drive</a>
             </li>
           </ul>
         </nav>
