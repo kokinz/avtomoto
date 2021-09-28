@@ -21,7 +21,7 @@
 .footer__nav {
   min-height: 82px;
   width: 100%;
-  padding-left: 7px;
+  padding-left: 0;
 }
 
 .footer__list {
@@ -54,6 +54,8 @@
 }
 
 .footer__link {
+  margin-left: 0;
+
   @media (max-width: 1320px) {
     margin: 0 25px 0 0;
   }
